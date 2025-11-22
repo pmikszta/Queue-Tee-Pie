@@ -4,11 +4,12 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+class TestApp {
+
+    @Test
+    void placeholderTest() {
+        // This is a blank test placeholder for App.java
+        // You can add real tests for App's behavior later
     }
 }

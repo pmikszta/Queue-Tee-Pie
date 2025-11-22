@@ -3,12 +3,71 @@
  */
 package org.example;
 
+// App.java
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        //Simple attempt
+        System.out.println("------------------------ \n");
+        System.out.println("First Attempt \n");
+        
+        // Create some cuties
+        Cutie puppy = new Puppy();
+        Cutie kitty = new Kitty();
+        Cutie marmoset = new PygmyMarmoset();
+
+        // Create a queue
+        QueueTees queue = new QueueTees(5);
+
+        System.out.println("Initial queue size: " + queue.size());
+
+        // Enqueue cuties
+        queue.enqueue(puppy);
+        queue.enqueue(kitty);
+        queue.enqueue(marmoset);
+
+        System.out.println("Queue size after enqueue: " + queue.size());
+
+        // Dequeue cuties
+        System.out.println("Dequeue: " + queue.dequeue().description());
+        System.out.println("Dequeue: " + queue.dequeue().description());
+        System.out.println("Dequeue: " + queue.dequeue().description());
+
+        //another attempt
+        System.out.println("------------------------ \n");
+        System.out.println("Next attempt \n");
+        
+
+        Cutie puppy1 = new Puppy();
+        Cutie kitty1 = new Kitty();
+        Cutie marmoset1 = new PygmyMarmoset();
+        Cutie puppy2 = new Puppy();
+        Cutie kitty2 = new Kitty();
+        Cutie marmoset2 = new PygmyMarmoset();
+        
+        // Create a queue
+        QueueTees queue2 = new QueueTees(5);
+
+        System.out.println("Initial queue size: " + queue.size());
+
+        // Enqueue cuties
+        queue2.enqueue(puppy1);
+        queue2.enqueue(kitty1);
+        queue2.enqueue(marmoset1);
+        queue2.enqueue(puppy2);
+        queue2.enqueue(kitty2);
+        //should fail oversized
+
+
+        System.out.println("Queue size after adding members: " + queue2.size());
+
+        // Dequeue cuties
+        System.out.println("Dequeue: " + queue2.dequeue().description());
+        System.out.println("Dequeue: " + queue2.dequeue().description());
+        System.out.println("Dequeue: " + queue2.dequeue().description());
+        System.out.println("Dequeue: " + queue2.dequeue().description());
+        System.out.println("Dequeue: " + queue2.dequeue().description());
+
+
+
     }
 }
